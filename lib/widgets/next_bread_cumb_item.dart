@@ -13,11 +13,12 @@ class NextBreadcrumbItem extends StatelessWidget {
   /// The function should return a widget that represents the current appearance
   /// of the NextBreadcrumbItem. It receives a boolean indicating whether the widget
   /// is currently being hovered over.
-  final Widget Function(bool isHovered) hoverBuilder;
+  final Widget Function(BuildContext context, bool isHovered) hoverBuilder;
 
   @override
   Widget build(BuildContext context) {
     return HoverableWidget(
-        hoverBuilder: (_, bool isHovered) => hoverBuilder(isHovered));
+      hoverBuilder: (_, bool isHovered) => hoverBuilder(context, isHovered),
+    );
   }
 }

@@ -101,7 +101,7 @@ class NextButton extends StatelessWidget {
                     } else {
                       controller.reverse();
                     }
-                    return (itemBuilder!(context, isHovered, value)).onTap(() {
+                    return itemBuilder!(context, isHovered, value).onTap(() {
                       if (onPressed != null) {
                         onPressed!();
                       }
